@@ -79,7 +79,7 @@ Regularization-based:
 * [SI](https://arxiv.org/abs/1703.04200)
 * [MAS](https://arxiv.org/abs/1711.09601)
 * [DT2W](https://ieeexplore.ieee.org/abstract/document/10094960)
-* HiDe(ours)
+* HiDe([ours](https://github.com/maiwheat/HiDe))
 
 
 
@@ -117,13 +117,10 @@ There are two functions to run experiments. Set the arguments in the correspondi
 
    To **reproduce the results in the paper**, use the corresponding `.sh` files:
    ```sh
-   nohup sh shell/TFusion/{data}_exp.sh &
+   nohup sh shell/HiDe/{data}_exp.sh &
    ```
    ```sh
-   nohup sh shell/TFusion/{data}_exp.sh &
-   ```
-   ```sh
-   nohup sh shell/ablation/{data}_exp.sh &
+   nohup sh shell/HiDe/{data}_exp.sh &
    ```
     We run the experiment for multiple runs to compute the average performance. In each run, we randomize the class order and tune the best hyperparameters. So the hyperparameters are different across runs. The searching grid of hyperparamteters is set in `experiment/tune_config.py`. Experiment results will be saved as log into `result/tune_and_exp`.
 
